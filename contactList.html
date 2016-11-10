@@ -1,0 +1,36 @@
+<script>
+
+var friends = {
+	bill:	{
+		firstName:	"Bill",
+		lastName:	"Willis",
+		phoneNumber:"(555) 123 - 4567",
+		address:	["123 Cherry St.", "Cityville", "XX", "00000"]
+	},
+	steve:	{
+		firstName:	"Steve",
+		lastName:	"Johnson",
+		phoneNumber:"(555) 234 - 5678",
+		address:	["99 Melon St.", "Townsburg", "YY", "00001"]
+	}
+};
+var list = function() {
+	console.log("first\tlast\tphone#\t\t\taddress");
+	for (x in friends) {
+		console.log(friends[x].firstName + "\t" + friends[x].lastName + "\t" + friends[x].phoneNumber + "\t" + friends[x].address);
+	}
+}
+var search = function(name) {
+	for (x in friends) {
+		if ( friends[x].firstName == name) {
+			console.log(friends[x].firstName + "\t" + friends[x].lastName + "\t" + friends[x].phoneNumber + "\t" + friends[x].address);
+			return friends[x].firstName + "\t" + friends[x].lastName + "\t" + friends[x].phoneNumber + "\t" + friends[x].address;
+		}
+	}
+}
+
+
+list();
+search("Steve");
+
+</script>
